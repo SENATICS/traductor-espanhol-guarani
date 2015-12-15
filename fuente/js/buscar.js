@@ -41,10 +41,7 @@ function buscar(pal){
     
     //alert("Se llamara via ajax. " + palabra + " al " + traducira);
     $.ajax({
-        
-        //url: "http://localhost/guarani/ws.php?method=buscar&palabra="+palabra+"&traducira="+traducira
-        //url: "http://campus.senatics.gov.py/traductor/guarani/ws.php?method=buscar&palabra="+palabra+"&traducira="+traducira
-        url: "http://splconcrete2.senatics.gov.py/traductor/ws.php?method=buscar&palabra="+palabra+"&traducira="+traducira
+        url: "http://localhost/traductor/ws.php?method=buscar&palabra="+palabra+"&traducira="+traducira
     }).then(function(data) {
         
         resultados = "<hr></br><span style='font-size: 14pt; font-family:Times New Roman; font-style: italic;'>";

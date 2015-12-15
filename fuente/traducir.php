@@ -56,7 +56,7 @@ and open the template in the editor.
                 
                 function resumen(){
                     $.ajax({
-                        url: "http://splconcrete2.senatics.gov.py/traductor/ws.php?method=resumen"
+                        url: "http://localhost/traductor/ws.php?method=resumen"
         
                     }).then(function(data) {
                          bootbox.alert("<span style='color: red;'>"+ data.cantidadespanol+" palabras espa&ntilde;ol. "+ data.cantidadguarani+" palabras guaran&itilde;</span>");

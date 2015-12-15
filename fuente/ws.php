@@ -52,9 +52,7 @@ function utf8_encode_deep(&$input) {
 
 function getCon()
 {
-    //return mysqli_connect("localhost","root","","traductor");
-    return mysqli_connect("localhost","root","4dm1n.t3mpl31t-","traductor");
-    //return mysqli_connect("localhost","traductor","traductor","traductor");
+    return mysqli_connect("localhost","user","pass","traductor");
 }
 
 class Hello
