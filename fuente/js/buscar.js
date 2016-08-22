@@ -41,7 +41,7 @@ function buscar(pal){
     
     //alert("Se llamara via ajax. " + palabra + " al " + traducira);
     $.ajax({
-        url: "http://localhost/traductor/ws.php?method=buscar&palabra="+palabra+"&traducira="+traducira
+        url: "ws.php?method=buscar&palabra="+palabra+"&traducira="+traducira
     }).then(function(data) {
         
         resultados = "<hr></br><span style='font-size: 14pt; font-family:Times New Roman; font-style: italic;'>";
@@ -61,8 +61,8 @@ function buscar(pal){
             
             resultunico = resultunico + '<br><b>Pronunciaci&oacute;n : </b> (Pr&oacute;ximamente) ';
             
-            resultunico = resultunico + '<audio controls><source src="audio/1.ogg" type="audio/ogg">';
-            resultunico = resultunico + '<source src="audio/1.mp3" type="audio/mpeg">Tu navergador no soporta audio.';
+            resultunico = resultunico + '<audio controls>';
+            resultunico = resultunico + '<source src="audio/'+fila.id+'.wav" type="audio/mpeg">Tu navergador no soporta audio.';
             resultunico = resultunico + 'Favor actualizar a la &uacute;ltima versi&oacute;n</audio>';
             resultunico = resultunico + "</span>";
             $("#desplegarResultados").html(resultunico);
