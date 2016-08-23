@@ -62,7 +62,7 @@ function buscar(pal){
             resultunico = resultunico + '<br><b>Pronunciaci&oacute;n : </b> ';
             
             resultunico = resultunico + '<audio controls>';
-            resultunico = resultunico + '<source src="audio/'+fila.id+'.wav" type="audio/mpeg">Tu navergador no soporta audio.';
+            resultunico = resultunico + '<source src="audio/'+traducira+'/'+fila.id+'.wav" type="audio/mpeg">Tu navergador no soporta audio.';
             resultunico = resultunico + 'Favor actualizar a la &uacute;ltima versi&oacute;n</audio>';
             resultunico = resultunico + "</span>";
             $("#desplegarResultados").html(resultunico);
