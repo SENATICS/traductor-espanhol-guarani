@@ -5,6 +5,7 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html>
     <head>
+    <meta charset="UTF-8">
         <meta>
         <title>Guarani</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,6 +66,7 @@ and open the template in the editor.
         
 	</script>
         <script type="text/javascript" src="js/buscar.js"></script>
+
     </head>
 
     <body>
@@ -72,7 +74,9 @@ and open the template in the editor.
             Guaran&iacute;
         </h2> -->
         <div class="container">
-            
+            <h2 style="alignment-adjust: central; margin-right:150px; margin-left:0px;">
+            Guaran&iacute;
+        </h2>
             <div class="form-group">
                 El guaran&iacute;, una lengua americana hablada en 7 pa&iacute;ses de Am&eacute;rica del sur, compartida por ind&iacute;genas 
                 y criollos en Paraguay, donde es lengua oficial del Estado por disposici&oacute;n constitucional con cerca de 4 millones 
@@ -93,7 +97,10 @@ and open the template in the editor.
 	    <table>
                 <tbody>
                     <tr>
-                        <td>
+                        <td><h2 style="alignment-adjust: central; margin-right:150px; margin-left:0px;">
+            Traductor de Palabras Guaran&iacute; - Espa&ntilde;ol
+            <img src="img/beta.png" onclick="resumen();" alt="spl">
+        </h2>
                             <input name="palabra" size="100px" id="palabra" placeholder="Ingrese la palabra que desea traducir" type="text" class="form-control" value="" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">    
                             </br>
                             &nbsp;&nbsp;&nbsp;
@@ -134,7 +141,7 @@ and open the template in the editor.
         </div>
     </div>
 
-        <!-- </br></br><hr>
+         </br></br><hr>
         <table style="alignment-adjust: central">
             <tbody>
                 <tr>
@@ -155,7 +162,7 @@ and open the template in the editor.
                 </tr>
             </tbody>
         </table>	               	 
- -->
+ 
 
 <div id="example-popup" class="popup">
     <div class="popup-body">	<span class="popup-exit"></span>
