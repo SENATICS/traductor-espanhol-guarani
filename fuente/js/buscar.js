@@ -59,7 +59,7 @@ function buscar(pal){
             
             resultunico = resultunico + '<br><b>Palabra ' + idiomadestino +': </b>'+ fila.significado ;
             
-            resultunico = resultunico + '<br><b>Pronunciaci&oacute;n : </b> (Pr&oacute;ximamente) ';
+            resultunico = resultunico + '<br><b>Pronunciaci&oacute;n : </b> ';
             
             resultunico = resultunico + '<audio controls>';
             resultunico = resultunico + '<source src="audio/'+fila.id+'.wav" type="audio/mpeg">Tu navergador no soporta audio.';
