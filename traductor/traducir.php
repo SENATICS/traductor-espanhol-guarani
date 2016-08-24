@@ -103,9 +103,9 @@ and open the template in the editor.
                             <input name="palabra" size="100px" id="palabra" placeholder="Ingrese la palabra que desea traducir" type="text" class="form-control" value="" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">    
                             </br>
                             &nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="idioma" id="selectguarani" value="gu" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">&nbsp;al guaran&iacute;</input>
+                            <label for="selectguarani"><input type="radio" name="idioma" id="selectguarani" value="gu" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">&nbsp;al guaran&iacute;</label>
                             &nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="idioma" id="selectspanish" value="es" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">&nbsp;al espa&ntilde;ol</input>
+                            <label for="selectspanish"><input type="radio" name="idioma" id="selectspanish" value="es" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">&nbsp;al espa&ntilde;ol</label>
                             &nbsp;&nbsp;&nbsp;
                             <input name="button" type="button" id="traducir" class="btn btn-primary" value="Traducir">
                             
