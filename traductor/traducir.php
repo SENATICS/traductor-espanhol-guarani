@@ -70,13 +70,11 @@ and open the template in the editor.
     </head>
 
     <body>
-       <!--  <h2 style="alignment-adjust: central; margin-right:150px; margin-left:0px;">
-            Guaran&iacute;
-        </h2> -->
-        <div class="container">
-            <h2 style="alignment-adjust: central; margin-right:150px; margin-left:0px;">
+        <h2 style="alignment-adjust: central; margin-right:150px; margin-left:0px;">
             Guaran&iacute;
         </h2>
+        <div class="container">
+            
             <div class="form-group">
                 El guaran&iacute;, una lengua americana hablada en 7 pa&iacute;ses de Am&eacute;rica del sur, compartida por ind&iacute;genas 
                 y criollos en Paraguay, donde es lengua oficial del Estado por disposici&oacute;n constitucional con cerca de 4 millones 
@@ -92,15 +90,16 @@ and open the template in the editor.
             Traductor
              <img src="img/beta.png" onclick="resumen();" alt="spl"/> 
         </h2>--> 
+        <h2 style="alignment-adjust: central; margin-right:150px; margin-left:0px;">
+            Traductor de Palabras Guaran&iacute; - Espa&ntilde;ol
+            <img src="img/info.png" onclick="resumen();" alt="spl" width="32px" height="auto">
+        </h2>
         <div class="container">
             <div class="form-group">	
 	    <table>
                 <tbody>
                     <tr>
-                        <td><h2 style="alignment-adjust: central; margin-right:150px; margin-left:0px;">
-            Traductor de Palabras Guaran&iacute; - Espa&ntilde;ol
-            <img src="img/beta.png" onclick="resumen();" alt="spl">
-        </h2>
+                        <td>
                             <input name="palabra" size="100px" id="palabra" placeholder="Ingrese la palabra que desea traducir" type="text" class="form-control" value="" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">    
                             </br>
                             &nbsp;&nbsp;&nbsp;
