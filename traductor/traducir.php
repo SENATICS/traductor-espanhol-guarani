@@ -50,8 +50,8 @@ and open the template in the editor.
                 });
 
                 function ejemplo(){
-                    document.getElementById('selectspanish').checked = true;
-                    document.getElementById('palabra').value = 'ja';
+                    document.getElementById('selectguarani').checked = true;
+                    document.getElementById('palabra').value = 'ab';
                     buscar(null);
                 }
                 
