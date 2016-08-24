@@ -92,7 +92,7 @@ and open the template in the editor.
         </h2>--> 
         <h2 style="alignment-adjust: central; margin-right:150px; margin-left:0px;">
             Traductor de Palabras Guaran&iacute; - Espa&ntilde;ol
-            <img src="img/info.png" onclick="resumen();" alt="spl" width="32px" height="auto">
+            <img src="img/info.png" onclick="resumen();" width="32px" height="auto">
         </h2>
         <div class="container">
             <div class="form-group">	
