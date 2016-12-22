@@ -105,7 +105,8 @@ class Hello
         $cantidad = -1;
         $resultados = array();
         $mensaje = "";
-        
+	$palabra = utf8_decode($palabra);
+ 
         //$con=mysqli_connect("localhost","traductor","traductor","traductor");
         $con=getCon();
         
