@@ -26,7 +26,7 @@ box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.21);
     transition: all .5s;
     border-left:3px solid #888;
 }
-.buscador_principal{
+.buscador_principal_traductor{
     padding: 25px 15px;   
     font-size: 18px;
 }

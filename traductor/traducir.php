@@ -106,7 +106,7 @@
 
                             <hr class="small">
 
-                            <input name="palabra" size="100px" id="palabra" placeholder="Ingrese la palabra que desea traducir" type="text" class="form-control buscador_principal" value="" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">    
+                            <input name="palabra" size="100px" id="palabra" placeholder="Ingrese la palabra que desea traducir" type="text" class="form-control buscador_principal_traductor" value="" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">    
 
                             <br>
                             <div class="row">
