@@ -81,10 +81,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#">Traductor</a>
-                        </li>
-                        <li>
-                            <a href="#">Diccionario</a>
+                            <a href="#" onclick="resumen();">Diccionario</a>
                         </li>
                         <li>
                             <a href="#" data-toggle="modal" data-target="#InfoModal">Informaci&oacute;n</a>
@@ -106,7 +103,7 @@
 
                             <hr class="small">
 
-                            <input name="palabra" size="100px" id="palabra" placeholder="Ingrese la palabra que desea traducir" type="text" class="form-control buscador_principal_traductor" value="" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">    
+                            <input name="palabra" size="100px" id="palabra" placeholder="Ingrese la palabra que desea traducir" type="text" class="buscador_principal_traductor" value="" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">    
 
                             <br>
                             <div class="row">
@@ -210,10 +207,9 @@
         <div class="modal-content" style="alignment-adjust: central;">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Informaci&oacute;n</h4>
+                <h4 class="modal-title" id="myModalLabel">Guaran&iacute;</h4>
             </div>
             <div class="modal-body">
-                <h3>Guaran&iacute;</h3>
                 El guaran&iacute;, una lengua americana hablada en 7 pa&iacute;ses de Am&eacute;rica del sur, compartida por ind&iacute;genas 
                 y criollos en Paraguay, donde es lengua oficial del Estado por disposici&oacute;n constitucional con cerca de 4 millones 
                 de hablantes en Paraguay, donde es lengua materna del 86% de los habitantes. Esta lengua comparte con el castellano
