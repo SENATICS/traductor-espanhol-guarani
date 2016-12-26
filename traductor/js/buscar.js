@@ -1,3 +1,10 @@
+
+function agregarTecla(letra){
+   palabra = $("#palabra").val().toLowerCase();
+   $("#palabra").val(palabra + letra.toLowerCase()).focus();
+   
+}
+
 function buscar(pal){
     var palabra = "";
     

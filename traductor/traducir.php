@@ -111,14 +111,14 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-4 col-sm-4 col-xs-6">
-                                    <div class="btn-group btn-group-sm" role="group" aria-label="First group"> 
-                                        <button type="button" class="btn btn-default">Ã</button> 
-                                        <button type="button" class="btn btn-default">Ẽ</button> 
-                                        <button type="button" class="btn btn-default">Ĩ</button> 
-                                        <button type="button" class="btn btn-default">Ñ</button> 
-                                        <button type="button" class="btn btn-default">Õ</button> 
-                                        <button type="button" class="btn btn-default">Ũ</button> 
-                                        <button type="button" class="btn btn-default">Ỹ</button> 
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="First group" style="width:100%"> 
+                                        <button type="button" onclick="agregarTecla('Ã')" class="btn btn-default">Ã</button> 
+                                        <button type="button" onclick="agregarTecla('Ẽ')" class="btn btn-default">Ẽ</button> 
+                                        <button type="button" onclick="agregarTecla('Ĩ')" class="btn btn-default">Ĩ</button> 
+                                        <button type="button" onclick="agregarTecla('Ñ')" class="btn btn-default">Ñ</button> 
+                                        <button type="button" onclick="agregarTecla('Õ')" class="btn btn-default">Õ</button> 
+                                        <button type="button" onclick="agregarTecla('Ũ')" class="btn btn-default">Ũ</button> 
+                                        <button type="button" onclick="agregarTecla('Ỹ')" class="btn btn-default">Ỹ</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 col-sm-8 col-xs-6">
