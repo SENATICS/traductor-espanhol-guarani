@@ -107,7 +107,7 @@
 
                             <br>
                             <div class="row">
-                                <div class="col-lg-4 col-sm-4 col-xs-6">
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
                                     <div class="btn-group btn-group-sm" role="group" aria-label="First group" style="width:100%"> 
                                         <button type="button" onclick="agregarTecla('Ã')" class="btn btn-default">Ã</button> 
                                         <button type="button" onclick="agregarTecla('Ẽ')" class="btn btn-default">Ẽ</button> 
@@ -118,7 +118,7 @@
                                         <button type="button" onclick="agregarTecla('Ỹ')" class="btn btn-default">Ỹ</button>
                                     </div>
                                 </div>
-                                <div class="col-lg-8 col-sm-8 col-xs-6">
+                                <div class="col-lg-8 col-sm-8 col-xs-12">
 
                                     <div class="row">
                                         <div class="col-lg-8 col-sm-8">

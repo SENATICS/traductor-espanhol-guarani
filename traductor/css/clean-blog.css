@@ -145,12 +145,12 @@ hr.small {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 80px 0 50px;
+  padding: 80px 0 80px;
   color: white;
 }
 @media only screen and (min-width: 768px) {
