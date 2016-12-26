@@ -13,7 +13,7 @@ function buscar(pal){
     var es = "es";
     var gu = "gu";
 
-    var resultados = "<hr></br><span style='font-size: 14pt; font-family:Times New Roman; font-style: italic;'>";
+    var resultados = "<span style='font-size: 14pt; font-family:Times New Roman; font-style: italic;'>";
     $("#desplegarResultados").html("<span></span>");
 
     if (!palabra) {
@@ -44,7 +44,7 @@ function buscar(pal){
         url: "ws.php?method=buscar&palabra="+palabra+"&traducira="+traducira
     }).then(function(data) {
         
-        resultados = "<hr></br><span style='font-size: 14pt; font-family:Times New Roman; font-style: italic;'>";
+        resultados = "<span style='font-size: 14pt; font-family:Times New Roman; font-style: italic;'>";
         $("#desplegarResultados").html("<span></span>");
     
         if(data.cantidad < 1){
@@ -55,28 +55,28 @@ function buscar(pal){
             
             fila = data.resultados[0];
             
-            resultunico = '<br><b>Palabra '+ idiomaorigen +': </b>' + fila.palabra;
+            resultunico = '<div class="tarjeta"><b>Palabra '+ idiomaorigen +': </b>' + fila.palabra;
             
             resultunico = resultunico + '<br><b>Palabra ' + idiomadestino +': </b>'+ fila.significado ;
             
-            resultunico = resultunico + '<br><b>Pronunciaci&oacute;n : </b> ';
+            resultunico = resultunico + '<div class="tarjeta_audio"><b style="vertical-align: top;">Pronunciaci&oacute;n : </b> ';
             
             resultunico = resultunico + '<audio controls>';
             resultunico = resultunico + '<source src="audio/'+traducira+'/'+fila.id+'.wav" type="audio/mpeg">Tu navergador no soporta audio.';
-            resultunico = resultunico + 'Favor actualizar a la &uacute;ltima versi&oacute;n</audio>';
-            resultunico = resultunico + "</span>";
+            resultunico = resultunico + 'Favor actualizar a la &uacute;ltima versi&oacute;n</audio><div>';
+            resultunico = resultunico + "</div></span>";
             $("#desplegarResultados").html(resultunico);
             
         }else if(data.cantidad > 1){
             //Se recorren los resultados
-            var posibleResult = "<b>Te sugerimos las siguientes palabras: </b><br>";
+            var posibleResult = "<h4>Te sugerimos las siguientes palabras: </h4>";
             for (var key in data.resultados) {
                 if (data.resultados.hasOwnProperty(key)) {
                     //alert(key + " -> " + cont[key]);
                     //alert(cont[key].palabra)
                     fila = data.resultados[key];
 
-                    posibleResult = posibleResult + '<a href="#" onclick="buscar(\'' + fila.palabra.replace(/'/g, "\\'") + '\')" >' + fila.palabra + '</a></br>';
+                    posibleResult = posibleResult + '<a href="#" class="resultado_lista" onclick="buscar(\'' + fila.palabra.replace(/'/g, "\\'") + '\')" >' + fila.palabra + '</a>';
 
                 }
             }
@@ -88,7 +88,7 @@ function buscar(pal){
 }
 
 function oldbuscar(pal) {
-    var resultados = "<hr></br><span style='font-size: 14pt; font-family:Times New Roman; font-style: italic;'>";
+    var resultados = "<span style='font-size: 14pt; font-family:Times New Roman; font-style: italic;'>";
     $("#desplegarResultados").html("<span></span>");
     var encontrado = 0;
     var palabra = "";
@@ -112,7 +112,7 @@ function oldbuscar(pal) {
         return;
     }
 
-    var codaudio = '<br><br>Pr&oacute;ximamente: <audio controls><source src="audio/1.ogg" type="audio/ogg"><source src="audio/1.mp3" type="audio/mpeg">Tu navergador no soporta audio. Favor actualizar a la última versi&oacute;n</audio>';
+    var codaudio = 'Pr&oacute;ximamente: <audio controls><source src="audio/1.ogg" type="audio/ogg"><source src="audio/1.mp3" type="audio/mpeg">Tu navergador no soporta audio. Favor actualizar a la última versi&oacute;n</audio>';
 
     if (traducira == es) {
         for (var ele in spanish) {
