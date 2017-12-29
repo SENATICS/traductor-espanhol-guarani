@@ -52,7 +52,7 @@ function utf8_encode_deep(&$input) {
 
 function getCon()
 {
-    return mysqli_connect("localhost","user","pass","traductor");
+    return mysqli_connect("localhost","root","","traductor");
 }
 
 class Hello
@@ -105,9 +105,8 @@ class Hello
         $cantidad = -1;
         $resultados = array();
         $mensaje = "";
-	$palabra = utf8_decode($palabra);
+		$palabra = utf8_decode($palabra);
  
-        //$con=mysqli_connect("localhost","traductor","traductor","traductor");
         $con=getCon();
         
         // Check connection
@@ -124,74 +123,104 @@ class Hello
         if (strcmp($traducira,"gu") == 0){
             
             //1er caso: si tiene un resultado
-            $q = "SELECT * FROM tr_espanol_guarani WHERE palabra = '".$palabra."'";
-            $sth = mysqli_query($con, $q);
-            $cantidad = mysqli_num_rows($sth);
-            
-            while($row = mysqli_fetch_assoc($sth)) {
-                    $resultados[] = array(
-                                           'id' => utf8_encode($row['id']),
-                                           'palabra' => utf8_encode($row['palabra']),
-                                           'clave_busqueda' => utf8_encode($row['clave_busqueda']),
-                                           'significado' => utf8_encode($row['significado'])
-                                         );
-            }
-            
+			$sentencia = $con->prepare("SELECT * FROM tr_espanol_guarani WHERE palabra = ?;");
+			$sentencia->bind_param("s", $palabra);
+			$cantidad = 0;
+			if ($sentencia->execute()) {
+				$sentencia->bind_result($col1,$col2,$col3,$col4);
+				
+				while ($sentencia->fetch()) {
+					//print_r("-". $col1.$col2.$col3.$col4."*\n");
+						
+					$resultados[] = array(
+										'id' => utf8_encode($col1),
+										'palabra' => utf8_encode($col2),
+										'clave_busqueda' => utf8_encode($col3),
+										'significado' => utf8_encode($col4)
+										);
+					$cantidad = $cantidad + 1;							
+				}
+			  
+			}
+			
+			
+			
             //2do caso: si no tuvo un unico resultado
             if($cantidad <> 1){
                 $palabra = php_rlike($palabra);  
                 //$palabra contendrá ahora 'J[oöôõðòóøOÖÔÕÒÓØ]s[eèéêëEÈÉÊË]', lista para
-                $q = "SELECT * FROM tr_espanol_guarani WHERE clave_busqueda RLIKE '$palabra'";
-                $sth = mysqli_query($con, $q);
-                $cantidad = mysqli_num_rows($sth);
-
-                while($row = mysqli_fetch_assoc($sth)) {
-                    $resultados[] = array(
-                                           'id' => utf8_encode($row['id']),
-                                           'palabra' => utf8_encode($row['palabra']),
-                                           'clave_busqueda' => utf8_encode($row['clave_busqueda']),
-                                           'significado' => utf8_encode($row['significado'])
-                                         );
-                }
+				
+				$sentencia = $con->prepare("SELECT id, palabra, clave_busqueda, significado FROM tr_espanol_guarani WHERE clave_busqueda RLIKE ?");
+				$sentencia->bind_param("s", $palabra);
+				$cantidad = 0;
+				if ($sentencia->execute()) {
+					$sentencia->bind_result($col1,$col2,$col3,$col4);
+					
+					while ($sentencia->fetch()) {
+						//print_r("-". $col1.$col2.$col3.$col4."*\n");
+						
+						$resultados[] = array(
+												   'id' => utf8_encode($col1),
+												   'palabra' => utf8_encode($col2),
+												   'clave_busqueda' => utf8_encode($col3),
+												   'significado' => utf8_encode($col4)
+												 );
+						$cantidad = $cantidad + 1;							
+					}
+				}
+				
             }
 
 
         }else if (strcmp($traducira,"es") == 0){
             
             //1er caso: si tiene un resultado
-            $q = "SELECT * FROM tr_guarani_espanol WHERE palabra = '".$palabra."'";
-            $sth = mysqli_query($con, $q);
-            $cantidad = mysqli_num_rows($sth);
-            
-            while($row = mysqli_fetch_assoc($sth)) {
-                    $resultados[] = array(
-                                           'id' => utf8_encode($row['id']),
-                                           'palabra' => utf8_encode($row['palabra']),
-                                           'clave_busqueda' => utf8_encode($row['clave_busqueda']),
-                                           'significado' => utf8_encode($row['significado'])
-                                         );
-            }
-            
+			$sentencia = $con->prepare("SELECT * FROM tr_guarani_espanol WHERE palabra = ?;");
+			$sentencia->bind_param("s", $palabra);
+			$cantidad = 0;
+			if ($sentencia->execute()) {
+				$sentencia->bind_result($col1,$col2,$col3,$col4);
+				
+				while ($sentencia->fetch()) {
+					//print_r("-". $col1.$col2.$col3.$col4."*\n");
+						
+					$resultados[] = array(
+										'id' => utf8_encode($col1),
+										'palabra' => utf8_encode($col2),
+										'clave_busqueda' => utf8_encode($col3),
+										'significado' => utf8_encode($col4)
+										);
+					$cantidad = $cantidad + 1;							
+				}
+			  
+			}
+
+
             //2do caso: si no tuvo un unico resultado
             if($cantidad <> 1){
                 $palabra = php_rlike($palabra);  
                 //$palabra contendrá ahora 'J[oöôõðòóøOÖÔÕÒÓØ]s[eèéêëEÈÉÊË]', lista para
-                $q = "SELECT * FROM tr_guarani_espanol WHERE clave_busqueda RLIKE '$palabra'";
-                $sth = mysqli_query($con, $q);
-                $cantidad = mysqli_num_rows($sth);
-
-                while($row = mysqli_fetch_assoc($sth)) {
-                    $resultados[] = array(
-                                           'id' => utf8_encode($row['id']),
-                                           'palabra' => utf8_encode($row['palabra']),
-                                           'clave_busqueda' => utf8_encode($row['clave_busqueda']),
-                                           'significado' => utf8_encode($row['significado'])
-                                         );
-                }
+				
+				$sentencia = $con->prepare("SELECT id, palabra, clave_busqueda, significado FROM tr_guarani_espanol WHERE clave_busqueda RLIKE ?");
+				$sentencia->bind_param("s", $palabra);
+				$cantidad = 0;
+				if ($sentencia->execute()) {
+					$sentencia->bind_result($col1,$col2,$col3,$col4);
+					
+					while ($sentencia->fetch()) {
+						//print_r("-". $col1.$col2.$col3.$col4."*\n");
+						
+						$resultados[] = array(
+												   'id' => utf8_encode($col1),
+												   'palabra' => utf8_encode($col2),
+												   'clave_busqueda' => utf8_encode($col3),
+												   'significado' => utf8_encode($col4)
+												 );
+						$cantidad = $cantidad + 1;							
+					}
+				}
             }
 
-            
-            
             
         }else{
             $mensaje = "El idioma a traducir no es valido. Ref: ".$traducira;
