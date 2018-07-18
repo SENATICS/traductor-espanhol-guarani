@@ -66,7 +66,7 @@
 
     <body>
 
-    <!-- Navegación -->
+    <!-- Navegación 
         <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container-fluid">
 
@@ -88,40 +88,35 @@
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
-        </nav>
+        </nav>-->
 
         <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="site-heading">
-                            <img src="img/portada.png" class="center">
-                            <h2>Traductor de Palabras Guaran&iacute; - Espa&ntilde;ol <img src="img/info.png" onclick="resumen();" style="cursor:pointer" width="30px" height="auto"></h2>
-
-                            <hr class="small">
+                            <img src="img/portada.png" class="center" style="margin-bottom:20px;">
+                            <h2>Traductor <span class="hidden-xs">de Palabras </span>Guaran&iacute; - Espa&ntilde;ol <a href="" data-toggle="modal" data-target="#InfoModal"><img src="img/info.png" onclick="resumen();" style="cursor:pointer" width="30px" height="auto"></a></h2>
 
                             <input name="palabra" size="100px" id="palabra" placeholder="Ingrese la palabra que desea traducir" type="text" class="buscador_principal_traductor" value="" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()">    
 
                             <br>
                             <div class="row">
-                                <div class="col-lg-4 col-sm-4 col-xs-12">
-                                    <div class="btn-group btn-group-sm" role="group" aria-label="First group" style="width:100%"> 
-                                        <button type="button" onclick="agregarTecla('Ã')" class="btn btn-default">Ã</button> 
-                                        <button type="button" onclick="agregarTecla('Ẽ')" class="btn btn-default">Ẽ</button> 
-                                        <button type="button" onclick="agregarTecla('Ĩ')" class="btn btn-default">Ĩ</button> 
-                                        <button type="button" onclick="agregarTecla('Ñ')" class="btn btn-default">Ñ</button> 
-                                        <button type="button" onclick="agregarTecla('Õ')" class="btn btn-default">Õ</button> 
-                                        <button type="button" onclick="agregarTecla('Ũ')" class="btn btn-default">Ũ</button> 
-                                        <button type="button" onclick="agregarTecla('Ỹ')" class="btn btn-default">Ỹ</button>
+                                <div class="col-lg-4 col-sm-4 col-xs-12 text-center" style="margin-bottom:20px">
+                                    <div class="btn-group btn-group-sm btn-group-justified" data-toggle="buttons"> 
+                                        <button type="button" onclick="agregarTecla('Ã')" class="btn btn-default" style="min-width:30px">Ã</button> 
+                                        <button type="button" onclick="agregarTecla('Ẽ')" class="btn btn-default" style="min-width:30px">Ẽ</button> 
+                                        <button type="button" onclick="agregarTecla('Ĩ')" class="btn btn-default" style="min-width:30px">Ĩ</button> 
+                                        <button type="button" onclick="agregarTecla('Ñ')" class="btn btn-default" style="min-width:30px">Ñ</button> 
+                                        <button type="button" onclick="agregarTecla('Õ')" class="btn btn-default" style="min-width:30px">Õ</button> 
+                                        <button type="button" onclick="agregarTecla('Ũ')" class="btn btn-default" style="min-width:30px">Ũ</button> 
+                                        <button type="button" onclick="agregarTecla('Ỹ')" class="btn btn-default" style="min-width:30px">Ỹ</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 col-sm-8 col-xs-12">
-
                                     <div class="row">
-                                        <div class="col-lg-8 col-sm-8">
+                                        <div class="col-lg-8 col-sm-8 col-xs-7">
                                             <div class="btn-group btn-group-sm btn-group-justified" data-toggle="buttons">
                                               <label class="btn btn-default active" for="selectguarani">
                                                 <input type="radio" autocomplete="off" checked  name="idioma" id="selectguarani" value="gu" onkeydown="if (event.keyCode == 13) document.getElementById('traducir').click()"> &nbsp;al guaran&iacute;
@@ -132,8 +127,8 @@
                                             </div>
                                             <a style="color:#FFF; font-size: 15px;" href="javascript:ejemplo();">Pruebe un ejemplo</a>
                                         </div>
-                                        <div class="col-lg-4 col-sm-4">
-                                            <input name="button" type="button" id="traducir" class="btn btn-primary" value="Traducir">
+                                        <div class="col-lg-4 col-sm-4 col-xs-5">
+                                            <input name="button" type="button" id="traducir" class="btn btn-primary" style="margin-top:-10px; border-radius:20px; border: 3px solid #FFF" value="Traducir">
                                         </div>
                                     </div>
                                     
@@ -149,7 +144,7 @@
             </div>
         </header>
 
-        <div class="container">
+        <div class="container" id="resultado">
 
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

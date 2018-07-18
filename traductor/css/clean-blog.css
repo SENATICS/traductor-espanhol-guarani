@@ -145,19 +145,23 @@ hr.small {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  border-radius: 0 0 30px 30px;
+  -webkit-box-shadow: 0px 21px 63px 0px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 21px 63px 0px rgba(0,0,0,0.2);
+box-shadow: 0px 21px 63px 0px rgba(0,0,0,0.2);
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 80px 0 80px;
+  padding: 20px 0 20px;
   color: white;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 80px 0;
+    padding: 20px 0;
   }
 }
 .intro-header .site-heading,
